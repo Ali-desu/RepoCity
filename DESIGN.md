@@ -29,3 +29,37 @@
 - Observability: metrics (queue depth, analysis duration, cache hit ratio), structured logs, and a trace across API → queue → worker
 - Reproducible deploy: the whole system starts with `docker compose up`
 - Storage stays bounded: eviction or TTL for old analyses
+
+
+## Project structure
+
+```
+repocity/
+├── contracts/
+│   └── city.example.json  # agreed shape of a city (the only thing both sides share)
+├── samples/               # generated city.json files (small repo, medium repo)
+├── worker/                # Python
+│   ├── analyzer/          # clone, scan, layout, limits (one module each)
+│   ├── tests/
+│   └── main.py            # CLI now, FastAPI or queue consumer later
+├── frontend/              # Three.js viewer
+│   ├── src/
+│   │   ├── city/          # scene setup, buildings, camera, hover
+│   │   └── data/          # the one place that loads a city
+│   └── public/
+├── api/                   # Java service (added much later)
+├── infra/                 # docker-compose, k6 load tests, dashboards (later)
+└── docs/                  # requirements, diagrams, decisions
+```
+
+## Folder overview
+
+| Folder | Purpose |
+|---|---|
+| `contracts/` | The agreed shape of a city (`city.example.json`), the only thing the two sides share |
+| `samples/` | Generated `city.json` files (small repo, medium repo) |
+| `worker/` | Python: `analyzer/` (clone, scan, layout, limits), `tests/`, `main.py` (CLI now, FastAPI or queue consumer later) |
+| `frontend/` | Three.js viewer: `src/city/` (scene, buildings, camera, hover), `src/data/` (the one place that loads a city) |
+| `api/` | Java service, added much later |
+| `infra/` | docker-compose, k6 load tests, dashboards, later |
+| `docs/` | Requirements, diagrams, decisions |

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "repo": { "owner": "demo", "name": "mini-shop", "sha": "0000000" },
+  "stats": {
+    "files": 13,
+    "loc": 7934,
+    "languages": { "Python": 5414, "JavaScript": 420, "Markdown": 2100 },
+    "truncated": false
+  },
+  "districts": [
+    { "id": "src", "parent": null, "name": "src", "x": 0, "y": 0, "w": 700, "h": 700, "depth": 1 },
+    { "id": "src/api", "parent": "src", "name": "api", "x": 10, "y": 10, "w": 320, "h": 680, "depth": 2 },
+    { "id": "src/core", "parent": "src", "name": "core", "x": 340, "y": 10, "w": 350, "h": 680, "depth": 2 },
+    { "id": "tests", "parent": null, "name": "tests", "x": 700, "y": 0, "w": 300, "h": 700, "depth": 1 },
+    { "id": "docs", "parent": null, "name": "docs", "x": 0, "y": 700, "w": 800, "h": 300, "depth": 1 }
+  ],
+  "buildings": [
+    { "id": "src/api/routes.py", "district": "src/api", "name": "routes.py", "x": 20, "y": 20, "w": 300, "h": 300, "lang": "Python", "kind": "source", "metrics": { "loc": 900 } },
+    { "id": "src/api/auth.py", "district": "src/api", "name": "auth.py", "x": 20, "y": 330, "w": 300, "h": 200, "lang": "Python", "kind": "source", "metrics": { "loc": 600 } },
+    { "id": "src/api/handlers.js", "district": "src/api", "name": "handlers.js", "x": 20, "y": 540, "w": 300, "h": 140, "lang": "JavaScript", "kind": "source", "metrics": { "loc": 420 } },
+
+    { "id": "src/core/engine.py", "district": "src/core", "name": "engine.py", "x": 350, "y": 20, "w": 330, "h": 300, "lang": "Python", "kind": "source", "landmark": true, "metrics": { "loc": 990 } },
+    { "id": "src/core/models.py", "district": "src/core", "name": "models.py", "x": 350, "y": 330, "w": 160, "h": 350, "lang": "Python", "kind": "source", "metrics": { "loc": 560 } },
+    { "id": "src/core/utils.py", "district": "src/core", "name": "utils.py", "x": 520, "y": 330, "w": 160, "h": 170, "lang": "Python", "kind": "source", "metrics": { "loc": 272 } },
+    { "id": "src/core/config.py", "district": "src/core", "name": "config.py", "x": 520, "y": 510, "w": 160, "h": 170, "lang": "Python", "kind": "config", "metrics": { "loc": 272 } },
+
+    { "id": "tests/test_api.py", "district": "tests", "name": "test_api.py", "x": 710, "y": 10, "w": 280, "h": 300, "lang": "Python", "kind": "test", "metrics": { "loc": 840 } },
+    { "id": "tests/test_core.py", "district": "tests", "name": "test_core.py", "x": 710, "y": 320, "w": 280, "h": 250, "lang": "Python", "kind": "test", "metrics": { "loc": 700 } },
+    { "id": "tests/conftest.py", "district": "tests", "name": "conftest.py", "x": 710, "y": 580, "w": 280, "h": 100, "lang": "Python", "kind": "test", "metrics": { "loc": 280 } },
+
+    { "id": "docs/README.md", "district": "docs", "name": "README.md", "x": 10, "y": 710, "w": 300, "h": 280, "lang": "Markdown", "kind": "docs", "metrics": { "loc": 840 } },
+    { "id": "docs/guide.md", "district": "docs", "name": "guide.md", "x": 320, "y": 710, "w": 250, "h": 280, "lang": "Markdown", "kind": "docs", "metrics": { "loc": 700 } },
+    { "id": "docs/CHANGELOG.md", "district": "docs", "name": "CHANGELOG.md", "x": 580, "y": 710, "w": 200, "h": 280, "lang": "Markdown", "kind": "docs", "metrics": { "loc": 560 } }
+  ]
+}
